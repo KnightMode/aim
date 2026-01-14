@@ -2,6 +2,10 @@
 
 An AI-powered task management system with a Jira-like interface where tasks are automatically executed by intelligent agents based on their tags (coding, documentation, etc.).
 
+## Demo
+
+![AI Task Manager Demo](output.gif)
+
 ## Features
 
 - **Jira-like Kanban Board**: Drag-and-drop interface with multiple status columns
