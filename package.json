@@ -1,0 +1,25 @@
+{
+  "name": "ai-task-manager",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered task management system with intelligent agents",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "backend:dev": "turbo run dev --filter=backend",
+    "frontend:dev": "turbo run dev --filter=frontend"
+  },
+  "devDependencies": {
+    "turbo": "^1.11.3"
+  },
+  "packageManager": "npm@10.2.4",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
