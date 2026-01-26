@@ -18,7 +18,7 @@ export interface Task {
 export type TaskStatus = 'todo' | 'queued' | 'in_progress' | 'completed' | 'failed';
 
 export interface TaskMetadata {
-  [key: string]: any;
+  [key: string]: string | string[] | undefined;
   // Coding task metadata
   repo_url?: string;
   branch?: string;

@@ -3,7 +3,7 @@ import { Modal } from '../Common/Modal';
 import { Button } from '../Common/Button';
 import { useCreateTask } from '../../hooks/useTasks';
 import { TASK_TAGS, PRIORITY_OPTIONS } from '../../utils/constants';
-import type { CreateTaskRequest, TaskMetadata } from '../../types';
+import type { CreateTaskRequest } from '../../types';
 
 interface CreateTaskModalProps {
   isOpen: boolean;
@@ -45,7 +45,7 @@ export const CreateTaskModal = ({ isOpen, onClose }: CreateTaskModalProps) => {
     setFormData({ ...formData, tags: [tag], metadata: {} });
   };
 
-  const handleMetadataChange = (key: string, value: any) => {
+  const handleMetadataChange = (key: string, value: string) => {
     setFormData({
       ...formData,
       metadata: { ...formData.metadata, [key]: value },
