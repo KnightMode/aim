@@ -1,0 +1,17 @@
+# Throwaway workflow to exercise Beacon's CI-failure triage end-to-end.
+# Trigger:  gh workflow run triage-test.yml -R KnightMode/aim
+# Each run fails on purpose; delete this file when done testing.
+name: Triage Test
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run backend tests
+        run: |
+          echo "=== RUN   TestNewRouter"
+          echo "    router_test.go:18: NewRouter returned nil registry for agent \"docs\""
+          echo "    apps/backend/internal/agents/router.go:42: nil map assignment in NewRouter"
+          echo "--- FAIL: TestNewRouter (0.02s)"
+          echo "FAIL"
+          exit 1
