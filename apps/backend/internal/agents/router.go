@@ -7,7 +7,7 @@ import (
 
 // Router routes tasks to appropriate agents based on tags
 type Router struct {
-	agents []Agent
+	registry []Agent
 }
 
 // NewRouter creates a new Router with registered agents
